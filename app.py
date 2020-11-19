@@ -11,7 +11,7 @@ with open("config.yml", 'r') as ymlfile:
     config = yaml.load(ymlfile)
 
 
-@app.route('/charge', methods=['post'])
+@app.route('/charge/', methods=['post'])
 def index():
     body = request.get_json()
     response = chargeAPI(body)
